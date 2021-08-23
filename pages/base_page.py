@@ -16,7 +16,7 @@ class BasePage(object):
         return self.driver.find_element_by_xpath("//*[contains(text(),'Вход')]")
 
     def get_menu(self):
-        return self.driver.find_elements_by_xpath("//*[@id='navtop]")
+        return self.driver.find_elements_by_xpath("//*[@id='navtop']")
 
     def search(self):
         return self.driver.find_element_by_xpath("//input[@placeholder='Введите запрос...']")
