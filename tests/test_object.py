@@ -52,7 +52,7 @@ def test_topmenu(driver):
         assert top[i] == menu[i]
 
 
-##
+##ok
 
 # Проверка поиска
 def test_search_cat(driver):
@@ -64,7 +64,7 @@ def test_search_cat(driver):
     assert a[1] == quantity
 
 
-##
+##ok
 
 # Проверка поиска для авторизованного
 def test_searchlog_cat(driver):
@@ -78,7 +78,7 @@ def test_searchlog_cat(driver):
     assert a[1] == quantity
 
 
-##
+##ok
 
 
 # Соответствие категорий сопственного производства БТ прямой вход
@@ -311,6 +311,8 @@ def test_basket_comments(driver):
     basket_page = BasketPage(driver)
     basket_page.visit()
     assert basket_page.get_comments().is_displayed
+
+
 ##
 
 # проверка полей в контактной информации при оформлении заказа для неавторизованного
@@ -323,6 +325,8 @@ def test_basket_info(driver):
     assert basket_page.get_phone().is_displayed
     assert basket_page.get_lastname().is_displayed
     assert basket_page.get_address().is_displayed
+
+
 ##
 
 # Удаление товаров из корзины для авторизванного
@@ -332,6 +336,8 @@ def test_basket_delete(driver):
     basket_page.visit()
     basket_page.get_delete().click()
     assert basket_page.get_null_basket().is_displayed
+
+
 ##
 
 # Кнопка быстрого оформления для не авторизванного
@@ -342,6 +348,8 @@ def test_basket_quickbut(driver):
     basket_page.scroll()
     basket_page.get_quick_but().click()
     assert basket_page.get_dialog().is_displayed
+
+
 ##
 
 # Кнопка оформления заказа для авторизованного
