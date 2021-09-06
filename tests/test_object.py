@@ -74,7 +74,7 @@ def test_searchlog_cat(driver):
     assert a[1] == quantity
 
 
-# Соответствие категорий сопственного производства БТ прямой вход
+# Соответствие категорий собственного производства БТ прямой вход
 def test_catown(driver):
     category_page = OwnPage(driver)
     category_page.categori_visit()
@@ -220,7 +220,7 @@ def test_basket_delete(driver):
     assert basket_page.get_null_basket().is_displayed
 
 
-# добавление суммы товара из поиска в значек корзинки на главной для не авторизованного
+# добавление суммы товара из поиска в значок корзины на главной для не авторизованного
 def test_basket_search_add(driver):
     base_page = BasePage(driver)
     base_page.visit()
@@ -232,7 +232,7 @@ def test_basket_search_add(driver):
     assert a.text != "0 P"
 
 
-# добавление суммы товара из каталога в значек корзинки на главной для авторизованного
+# добавление суммы товара из каталога в значок корзины на главной для авторизованного
 def test_basket_cat_add(driver):
     base_page = BasePage(driver)
     base_page.visit()
@@ -253,7 +253,7 @@ def test_basket_cat_add(driver):
     assert a.text != "0 P"
 
 
-# соответские суммы заказа нескольких товаров из акции с суммой в значке корзинки на главной
+# Соответствие суммы заказа нескольких товаров из акции с суммой в значке корзинки на главной
 # для неавторизованного
 def test_basket_sumsale(driver):
     base_page = BasePage(driver)
